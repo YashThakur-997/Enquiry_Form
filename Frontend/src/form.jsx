@@ -31,7 +31,7 @@ const Form = () => {
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-          axios.put("http://localhost:3000/enquiry/update/" + formdata._id, formdata)
+          axios.put("https://enquiryform-production.up.railway.app/enquiry/update/" + formdata._id, formdata)
             getenquiry();
           Swal.fire("Updated!", "", "success");
         } else if (result.isDenied) {
@@ -41,7 +41,7 @@ const Form = () => {
     }
     else {
       toast.success("Form Submitted Successfully")
-      axios.post("http://localhost:3000/enquiry/insert", formdata).then(() => {      // sending a post request to the server
+      axios.post("https://enquiryform-production.up.railway.app/enquiry/insert", formdata).then(() => {      // sending a post request to the server
         setformdata({
           name: "",
           email: "",
@@ -65,7 +65,7 @@ const Form = () => {
   }
 
   let getenquiry = () => {
-    axios.get("http://localhost:3000/enquiry/view").then((res) => {
+    axios.get("https://enquiryform-production.up.railway.app/enquiry/view").then((res) => {
       setenquirylist(res.data)
     })
   }
