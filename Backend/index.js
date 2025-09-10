@@ -12,6 +12,10 @@ app.use(express.json()) //to parse json data
 //routes
 app.use("/enquiry",Enquiryrouter);
 
+app.get("/",(req,res)=>{
+    res.send("Hello World")
+})
+
 
 //database connection
 mongoose.connect(process.env.DBURL).then(()=>{
