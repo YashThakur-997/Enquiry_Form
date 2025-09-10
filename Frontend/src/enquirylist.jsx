@@ -16,7 +16,7 @@ const enquirylist = ({ data,getenquiry,swal,setformdata}) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete("http://localhost:3000/enquiry/delete/" + id).then(() => {
+        axios.delete("https://enquiryform-production.up.railway.app/enquiry/delete/" + id).then(() => {
           toast.success("Deleted Successfully")
           getenquiry();
         })
@@ -30,7 +30,7 @@ const enquirylist = ({ data,getenquiry,swal,setformdata}) => {
   }
 
   let handleedit = (id) => {
-    axios.get("http://localhost:3000/enquiry/edit/" + id).then((data) => {
+    axios.get("https://enquiryform-production.up.railway.app/enquiry/edit/" + id).then((data) => {
       console.log(data)
       setformdata(data.data)
     })
