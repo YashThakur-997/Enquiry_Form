@@ -77,8 +77,8 @@ const Form = () => {
   return (
     <>
       <ToastContainer />
-      <div className="flex max-h-screen overflow-y-auto">
-        <form className="flex w-1/3 flex-col gap-4 mx-auto mt-20 border p-4 rounded-lg bg-gray-900" onSubmit={handleSubmit}>
+      <div className="lg:flex max-h-screen overflow-y-auto">
+        <form className="flex lg:w-1/3 flex-col gap-4 mx-auto mt-20 border p-4 rounded-lg bg-gray-900" onSubmit={handleSubmit}>
           <h1 className="text-white font-bold text-3xl self-center">USER ENQUIRY</h1>
           <div>
             <div className="mb-2 block">
